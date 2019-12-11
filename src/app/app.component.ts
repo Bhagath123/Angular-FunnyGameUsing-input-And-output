@@ -6,12 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  oddNumber:number[]=[];
-  evenNumber:number[]=[];
-  onnNumberFired(pnumber:number){
-if(pnumber % 2===0){
-  this.evenNumber.push(pnumber)
-}else
-this.oddNumber.push(pnumber);
-}
+  loadedFeatured="recipe"
+  onSelect(featured:string){
+this.loadedFeatured=featured;
+  }
 }

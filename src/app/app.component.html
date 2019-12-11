@@ -1,15 +1,10 @@
+<app-header  (featuredList)="onSelect($event)"  ></app-header>
 <div class="container">
-<div class="row">
-    <div class="xs-12 mt-4">
-        <app-game-control (numberFired)="onnNumberFired($event)"></app-game-control>
+  <div class="row">
+    <div class="col-md-12">
+    
+    <app-recipe  *ngIf="loadedFeatured ==='recipe'"></app-recipe>
+    <app-shopping-list *ngIf="loadedFeatured !=='recipe'"></app-shopping-list>
     </div>
+  </div>
 </div>
-<div class="row">
-    <div class="xs-12 mt-4">
-        <app-odd *ngFor="let oddNumbers of oddNumber" [number]="oddNumbers"></app-odd>
-        <app-even *ngFor="let evenNumbers of evenNumber" [number] ="evenNumbers"></app-even>
-    </div>
-</div>
-</div>
-
-
